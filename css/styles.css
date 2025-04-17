@@ -1,0 +1,189 @@
+html {
+  font-family: IBM Plex Mono;
+}
+
+.navbar-logo {
+  width: 40px; /* Ukuran lebar gambar */
+  height: 40px; /* Ukuran tinggi gambar */
+  border-radius: 50%; /* Membuat gambar menjadi bulat */
+  object-fit: cover; /* Menjaga proporsi gambar */
+  margin-right: 8px; /* Jarak antara gambar dan teks */
+}
+
+/* Body Styling */
+body {
+  background: linear-gradient(to bottom, #1c2541, #000000);
+  color: #ffffff; /* Untuk memastikan teks terlihat jelas */
+  margin: 0;
+  padding-top: 70px; /* Sesuaikan dengan tinggi navbar untuk mencegah konten tertutup */
+  font-family: Arial, sans-serif;
+}
+
+.uk-section-secondary {
+  background: none; /* Hapus pengaturan sebelumnya untuk bagian tertentu */
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  margin: 10px auto; /* Menempatkan navbar ke tengah */
+  max-width: 90%; /* Tidak menyentuh sisi kanan dan kiri */
+  border-radius: 20px; /* Membuat border melengkung */
+  background-color: rgba(26, 26, 26, 0.6); /* Transparan */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow halus */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.navbar.scrolled {
+  background-color: rgba(26, 26, 26, 0.95); /* Opaque saat di-scroll */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Shadow lebih tebal */
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar-logo img {
+  border-radius: 50%;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo img:hover {
+  transform: scale(1.1);
+}
+
+.navbar-links a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0 15px;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-links a:hover {
+  color: #ffcc00; /* Accent color */
+}
+
+/* Media Query untuk Layar Kecil */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links a {
+    padding: 10px 0;
+  }
+}
+
+.uk-button-primary {
+  border-radius: 30px; /* Membuat tombol lebih melengkung */
+  padding: 12px 30px; /* Menambahkan ruang dalam tombol */
+  font-size: 16px; /* Ukuran font yang lebih sesuai */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Efek hover */
+}
+
+.uk-button-primary:hover {
+  background-color: #0056b3; /* Warna saat hover */
+  transform: scale(1.05); /* Sedikit memperbesar saat hover */
+}
+
+.skill-logo {
+  width: 80px;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease, transform 0.3s ease;
+}
+
+.skill-logo:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1); /* Membuat gambar sedikit membesar */
+}
+
+.skill-logo.laravel {
+  width: 100px; /* Buat lebih besar dari lainnya */
+}
+
+.skill-text {
+  margin-top: 10px; /* Atur margin sesuai kebutuhan */
+}
+
+.skill-text.laravel {
+  margin-top: 20px; /* Sesuaikan dengan logo Laravel */
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 20px; /* Opsional: memberi jarak ke bawah */
+}
+
+/* Atur elemen yang menjadi target navigasi */
+section,
+.content {
+  margin-top: 20px; /* Berikan jarak tambahan agar lebih rapi */
+}
+
+/* Navbar untuk Fixed Position */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Agar navbar berada di atas elemen lain */
+  background-color: rgba(28, 37, 65, 0.9); /* Transparan dengan sedikit warna */
+  border-radius: 0 0 10px 10px; /* Melengkung hanya di bagian bawah */
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan agar terlihat modern */
+}
+
+/* Target konten saat di-scroll */
+.target-content {
+  padding-top: 80px; /* Berikan jarak untuk elemen yang tertuju oleh navigasi */
+}
+
+body {
+  padding-top: 80px; /* Sesuaikan angka 80px dengan tinggi navbar */
+}
+
+section {
+  padding-top: 80px; /* Tambahkan padding agar konten tidak terpotong */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.social-links-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Jarak antar logo */
+    margin-top: 20px;
+  }
+  
+  .social-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #f2f2f2;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan untuk efek */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .social-logo:hover {
+    transform: scale(1.1); /* Efek zoom saat hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Efek bayangan lebih besar */
+  }
+  
